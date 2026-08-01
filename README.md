@@ -74,7 +74,7 @@ This project demonstrates an end-to-end BI workflow—from SQL-based data extrac
 # 📊 Dashboard Preview
 
 <p align="center">
-<img src="dashboard.png" width="100%">
+<img src="Dashboard Image.png" width="100%">
 </p>
 
 ---
