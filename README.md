@@ -2,7 +2,7 @@
 
 # 🏦 NextGen Retail Banking Intelligence Platform
 
-### Executive Business Intelligence Dashboard using SQL & Tableau
+### Executive Business Intelligence Dashboard using SQL, MySQL & Tableau
 
 <p>
 <img src="Dashboard Image.png" width="100%" alt="Retail Banking Dashboard">
@@ -19,11 +19,105 @@
 
 # 📖 Project Overview
 
-The **NextGen Retail Banking Intelligence Platform** is an executive-level Business Intelligence dashboard built using **SQL** and **Tableau**.
+The **NextGen Retail Banking Intelligence Platform** is an Executive Business Intelligence solution developed using **MySQL**, **SQL**, and **Tableau**.
 
-The project analyzes retail banking operations by transforming raw banking data into interactive dashboards that help monitor customer growth, account distribution, transaction activity, loan portfolios, and customer balances.
+The project transforms raw retail banking data into meaningful business insights through SQL-based analysis, KPI generation, relational database design, and interactive Tableau dashboards.
 
-This project demonstrates an end-to-end BI workflow—from SQL-based data extraction and KPI generation to dashboard design and business insight visualization.
+It demonstrates an end-to-end Business Intelligence workflow covering:
+
+- Relational Database Design
+- Data Exploration
+- SQL Analysis
+- KPI Development
+- Dashboard Design
+- Business Intelligence Reporting
+- Data Storytelling
+
+---
+
+# 🎯 Project Objectives
+
+- Analyze retail banking operations using SQL.
+- Design a normalized relational database.
+- Generate business KPIs for executive reporting.
+- Visualize banking insights using Tableau.
+- Enable data-driven decision-making through interactive dashboards.
+
+---
+
+# 🏛 Database Schema (ER Diagram)
+
+The project is built on a normalized relational database consisting of multiple interconnected banking entities.
+
+The Entity Relationship Diagram (ERD) illustrates how customers, accounts, transactions, loans, merchants, branches, and cards are connected using primary and foreign keys.
+
+<p align="center">
+<img src="ER Diagram.png" width="100%" alt="Retail Banking ER Diagram">
+</p>
+
+---
+
+# 🗄 Database Design
+
+The database contains the following core entities:
+
+- 👤 Customers
+- 💳 Accounts
+- 💰 Transactions
+- 🏦 Loans
+- 💳 Cards
+- 🛒 Merchants
+- 🏢 Branches
+
+### Entity Relationships
+
+- One Customer → Multiple Accounts
+- One Customer → Multiple Loans
+- One Account → Multiple Transactions
+- Transactions → Linked to Merchants
+- Customers → Assigned to Branches
+- Cards → Issued against Customer Accounts
+
+The normalized schema minimizes redundancy while maintaining referential integrity, enabling efficient SQL joins and analytical reporting.
+
+---
+
+# 🔄 Project Workflow
+
+```text
+CSV Dataset
+      │
+      ▼
+MySQL Database
+      │
+      ▼
+Entity Relationship Design (ERD)
+      │
+      ▼
+SQL Data Exploration
+      │
+      ▼
+Business KPI Generation
+      │
+      ▼
+Data Analysis
+      │
+      ▼
+Tableau Dashboard
+      │
+      ▼
+Business Insights
+```
+
+The project workflow includes:
+
+1. Designing the relational database schema.
+2. Importing banking datasets into MySQL.
+3. Exploring and validating the data.
+4. Writing SQL queries for analysis and KPI generation.
+5. Connecting processed data to Tableau.
+6. Building an executive dashboard.
+7. Publishing the complete BI solution on GitHub.
 
 ---
 
@@ -49,28 +143,6 @@ This project demonstrates an end-to-end BI workflow—from SQL-based data extrac
 
 ---
 
-# 💼 Business Questions Answered
-
-- Which account type has the highest number of customers?
-- How has customer acquisition changed over time?
-- Which account type maintains the highest average balance?
-- How has annual transaction volume changed?
-- What is the distribution of loans across different loan categories?
-- Which customers maintain the highest account balances?
-
----
-
-# 🛠 Tech Stack
-
-| Technology | Purpose |
-|------------|---------|
-| Tableau | Interactive Dashboard Development |
-| MySQL | Database Management |
-| SQL | KPI Calculation & Data Analysis |
-| CSV | Dataset |
-
----
-
 # 📊 Dashboard Preview
 
 <p align="center">
@@ -79,15 +151,76 @@ This project demonstrates an end-to-end BI workflow—from SQL-based data extrac
 
 ---
 
+# 💼 Business Questions Answered
+
+This dashboard helps answer important business questions such as:
+
+- Which account type has the highest number of customers?
+- How has customer acquisition changed over time?
+- Which customers maintain the highest balances?
+- What is the yearly transaction trend?
+- Which loan category contributes the most to the overall portfolio?
+- Which account type has the highest average balance?
+- Which customers are the most valuable to the bank?
+
+---
+
+# 🛠 Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| Tableau | Interactive Dashboard Development |
+| MySQL | Relational Database |
+| SQL | Data Analysis & KPI Generation |
+| ER Diagram | Database Design |
+| CSV | Dataset |
+
+---
+
+# 📂 Repository Structure
+
+```text
+NextGen-Retail-Banking-Intelligence-Platform
+│
+├── Retail_Banking_Executive_Dashboard.twbx
+├── dashboard.png
+├── ER_Diagram.png
+├── README.md
+│
+├── Dataset
+│   ├── customers.csv
+│   ├── accounts.csv
+│   ├── loans.csv
+│   ├── cards.csv
+│   ├── merchants.csv
+│   ├── branches.csv
+│   └── transactions.csv
+│
+└── SQL
+    ├── 01_Data_Exploration.sql
+    ├── 02_Basic_KPIs.sql
+    ├── 03_Customer_Analysis.sql
+    ├── 04_Account_Analysis.sql
+    ├── 05_Transaction_Analysis.sql
+    ├── 06_Loan_Analysis.sql
+    ├── 07_Merchant_Analysis.sql
+    ├── 08_Advanced_Joins.sql
+    ├── 09_Window_Functions.sql
+    ├── 10_Common_Table_Expressions.sql
+    └── 11_Business_Case_Queries.sql
+```
+
+---
+
 # 📂 Repository Contents
 
-| File | Description |
-|------|-------------|
-| `.twbx` | Tableau Packaged Workbook |
-| `.sql` | SQL scripts used for dashboard analysis |
-| `.csv` | Banking datasets |
-| `dashboard.png` | Dashboard Preview |
-| `README.md` | Project Documentation |
+- 📊 Tableau Dashboard Workbook
+- 🗄 Relational Database Schema
+- 📝 SQL Analysis Scripts
+- 📁 Banking Datasets
+- 🖼 Dashboard Screenshot
+- 🏛 Entity Relationship Diagram
+- 📖 Project Documentation
 
 ---
 
@@ -102,67 +235,66 @@ This project demonstrates an end-to-end BI workflow—from SQL-based data extrac
 
 ---
 
+# 💡 SQL Concepts Used
+
+- SELECT
+- WHERE
+- GROUP BY
+- ORDER BY
+- Aggregate Functions
+- INNER JOIN
+- LEFT JOIN
+- Common Table Expressions (CTEs)
+- Window Functions
+- CASE Statements
+- Subqueries
+
+---
+
 # 🎯 Skills Demonstrated
 
 - SQL Query Writing
-- Data Cleaning
+- MySQL
+- Relational Database Design
+- Entity Relationship Diagram (ERD)
+- Primary & Foreign Keys
+- SQL Joins
+- Data Exploration
 - KPI Development
-- Data Analysis
 - Business Intelligence
-- Dashboard Design
+- Tableau Dashboard Development
 - Data Visualization
-- Tableau
+- Data Storytelling
 - Executive Reporting
 
 ---
 
-# 📁 Project Files
+# ▶️ How to Use
 
-```
-Retail_Banking_Executive_Dashboard.twbx
-
-dashboard.png
-
-customers.csv
-accounts.csv
-transactions.csv
-loans.csv
-
-01_Total_Customers.sql
-02_Total_Accounts.sql
-03_Total_Transactions.sql
-04_Total_Loans.sql
-05_Average_Balance.sql
-06_Account_Distribution.sql
-07_Customer_Trend.sql
-08_Transaction_Volume.sql
-09_Loan_Portfolio.sql
-10_Top10_Customers.sql
-```
-
----
-
-# ▶️ How to Open
-
-1. Clone this repository.
+1. Clone the repository.
 
 ```bash
 git clone https://github.com/diyasharma21/Nextgen-Retail-Banking-Intelligence-Platform-Tableau.git
 ```
 
-2. Open the `.twbx` file using Tableau Desktop or Tableau Public.
+2. Open **Retail_Banking_Executive_Dashboard.twbx** using Tableau Desktop or Tableau Public.
 
-3. Explore the dashboard and review the SQL scripts used to generate the KPIs.
+3. Explore the dashboard.
+
+4. Review the SQL scripts used for KPI generation and business analysis.
+
+5. Refer to the ER Diagram to understand the relational database design.
 
 ---
 
 # 🚀 Future Enhancements
 
 - Interactive dashboard filters
-- Drill-down analysis
+- Drill-through analytics
 - Branch-wise performance dashboard
 - Customer segmentation
-- Predictive analytics
+- Fraud detection analysis
+- Predictive analytics using Machine Learning
 
 ---
 
@@ -172,8 +304,12 @@ git clone https://github.com/diyasharma21/Nextgen-Retail-Banking-Intelligence-Pl
 
 B.Tech – Computer Science (Cloud Computing & Automation)
 
-GitHub: https://github.com/diyasharma21
+🔗 GitHub: https://github.com/diyasharma21
 
 ---
 
-## ⭐ If you like this project, please consider giving it a star!
+<div align="center">
+
+### ⭐ If you found this project useful, consider giving it a Star!
+
+</div>
